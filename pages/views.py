@@ -9,7 +9,9 @@ def home_view(request):
     return render(request, 'pages/home.html')
 
 def about_view(request):
-    return render(request, 'pages/about.html')
+    skills = Skill.objects.all()
+    return render(request, 'pages/about.html', {'skills': skills})
+
 
 def contact_view(request):
     if request.method == "POST":
@@ -63,3 +65,4 @@ def contact_view(request):
     else:
         form = ContactForm()
     return render(request, 'pages/contact.html', {"form": form})
+

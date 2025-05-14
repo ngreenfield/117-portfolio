@@ -21,12 +21,10 @@
 
 <section class="skills-section center-column">
     <h2 class="subtitles">My Skills</h2>
-    <div class="skills-list center-row">
-        <ul class="text-label experience-skills"> 
-        {% for skill in skills %} 
-            <li>{{ skill.name }}</li> 
-        {% endfor %} 
-        </ul>
+    <div class="projects-skills">
+        {% for skill in skills %}
+        <label class="text-label">{{ skill.name }}</label>
+        {% endfor %}
     </div>
 </section>
 {% endblock content %}

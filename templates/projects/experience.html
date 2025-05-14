@@ -21,9 +21,9 @@
             {% if experience.skill.all %}
             <div class="experience-skills">
                 <h4>Skills</h4>
-                <div class="skills-list center-row">
+                <div class="projects-skills">
                     {% for skill in experience.skill.all %}
-                        <label class="text-label">{{ skill.name }}</label>
+                    <label class="text-label">{{ skill.name }}</label>
                     {% endfor %}
                 </div>
             </div>
