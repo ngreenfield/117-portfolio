@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    About Me 
+{% endblock title %}
+
+{% block content %}
+<section class="about-section center-row">
+    <div class="about-image-container center-row">
+        <img src="{% static './img/sillydog.png' %}" alt="my picture">
+    </div>
+    <div class="about-description-container">
+        <h1>Full Stack Developer</h1>
+        <h2 class="subtitles">Nicholas Greenfield</h2>
+        <p>I'm a 30-year-old U.S. Army veteran who proudly served for four years as a combat medic. My time in the military taught me resilience, adaptability, and the importance of staying calm under pressure—qualities that continue to guide me in every aspect of life. That experience shaped my mindset and gave me a strong foundation for tackling challenges head-on.
+                <br><br>
+            These days, I channel that same focus and discipline into my passion for coding and programming. I love the process of building solutions, solving problems, and continually learning new technologies. Outside of tech, I enjoy video games, sim racing, swimming, and spending quality time with my dogs. Whether I'm writing code or racing a virtual track, I'm always looking for ways to grow, create, and stay engaged.</p>
+    </div>
+</section>
+
+<section class="skills-section center-column">
+    <h2 class="subtitles">My Skills</h2>
+    <div class="skills-list center-row">
+        <ul class="text-label experience-skills"> 
+        {% for skill in skills %} 
+            <li>{{ skill.name }}</li> 
+        {% endfor %} 
+        </ul>
+    </div>
+</section>
+{% endblock content %}

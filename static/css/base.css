@@ -1,0 +1,63 @@
+:root{
+    --lobster-font: "Lobster Two", sans-serif;
+    --open-sans-font: "Open Sans", sans-serif;
+
+    --primary-color: #4c64ff;
+    --secondary-color: rgb(121, 235, 191);
+    --background-color: rgb(51, 51, 51);
+    --text-color: #D0D5FB;
+}
+
+html{
+    font-family: var(--open-sans-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-family: var(--lobster-font);
+    font-size: 1.7rem;
+}
+
+.subtitles{
+    color: var(--primary-color);
+}
+
+.text-label{
+    background-color: gray;
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+.center-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+

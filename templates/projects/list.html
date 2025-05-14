@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Projects list 
+{% endblock title %}
+
+{% block content %}
+<section class="projects-section center-column">
+    <h2 class="subtitles">Projects</h2>
+    
+    <div>
+        <a class="new-project-btn" href="{% url 'new_project' %}">New Project</a>
+    </div>
+    
+    <div class="projects-list center-row">
+        
+        {% for project in projects %}   
+        <!--For each item in context-->
+
+         <div class="projects-card">
+            <a href="{{ project.url }}" target="_blank">
+                <img src="{{ project.image.url }}" alt="project">
+                <p class="card-name">{{ project.name }}</p>
+                <p>{{ project.description }}</p>
+                <p>{{ project.year }}</p>
+
+                <div class="projects-skills">
+                    {% for skill in project.skill.all %}
+                        <label class="text-label">{{ skill.name }}</label>
+                    {% endfor %}
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+
+        <div>
+            <form method="post" id="newProjectForm" class="center-column">
+                {% csrf_token %}
+                {{ form.name }}
+            </form>
+
+        </div>
+    </div>
+</section>
+{% endblock content %}

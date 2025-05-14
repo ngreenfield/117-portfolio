@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+New Project
+{% endblock title %}
+
+{% block content %}
+<h2 class="subtitles center-column">
+    New Project
+</h2>
+
+<form method="post" class="new-project-form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create Project</button>
+</form>
+
+{% endblock content %}
